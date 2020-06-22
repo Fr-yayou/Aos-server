@@ -10,14 +10,14 @@ module.exports = function validateLoginInput(data){
 
     //Email check //
     if(Validator.isEmpty(data.email)){
-        errors.email ="Email field is required"
+        errors.email ="Ce champ est obligatoire"
     }else if(!Validator.isEmail(data.email)){
-        errors.email ="Email is invalid";
+        errors.email ="Le format de l'e-mail est incorrect";
     }
 
     //Password check//
     if(Validator.isEmpty(data.password)){
-        errors.password ="Password field is required"
+        errors.password ="Ce champ est obligatoire"
     }
 
     return{
